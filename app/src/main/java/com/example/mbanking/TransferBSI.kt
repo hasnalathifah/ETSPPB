@@ -104,5 +104,5 @@ fun TransferBSI(navController: NavController) {
 
 fun transferBSIHandler(navController: NavController, norekTujuan: String, nominal: String, keterangan: String){
     navController.navigate("Confirmation")
-    Log.i("tfBSI", "tujuan = $norekTujuan nominal = $nominal keterangan = $keterangan")
+    Log.i("mylog", "tujuan = $norekTujuan nominal = $nominal keterangan = $keterangan")
 }

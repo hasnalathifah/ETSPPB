@@ -101,5 +101,5 @@ fun LoginPage(navController: NavController) {
 
 fun loginHandler(navController: NavController, noTelp: String, password: String){
     navController.navigate("transfer")
-    Log.i("login", "notelp = $noTelp password = $password")
+    Log.i("mylog", "notelp = $noTelp password = $password")
 }

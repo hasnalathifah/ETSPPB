@@ -110,5 +110,5 @@ fun TransferAntarBank(navController: NavController) {
 
 fun tfAntarBankHandler(navController: NavController, namaBank: String, norekTujuan: String, nominal: String, keterangan: String){
     navController.navigate("Confirmation")
-    Log.i("tfBSI", "bankTujuan = $namaBank norektujuan = $norekTujuan nominal = $nominal keterangan = $keterangan")
+    Log.i("mylog", "bankTujuan = $namaBank norektujuan = $norekTujuan nominal = $nominal keterangan = $keterangan")
 }

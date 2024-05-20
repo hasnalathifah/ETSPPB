@@ -104,5 +104,5 @@ fun Confirmation(navController: NavController) {
 fun confirmationHandler(navController: NavController, pin: String){
     if(pin == "batal") navController.navigate("transfer")
     else navController.navigate("Success")
-    Log.i("Confirmation", "PIN = $pin")
+    Log.i("mylog", "PIN = $pin")
 }
