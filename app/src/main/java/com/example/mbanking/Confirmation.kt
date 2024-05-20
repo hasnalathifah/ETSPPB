@@ -39,7 +39,7 @@ import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun Confirmation(navController: NavController) {
-    var pin by remember { mutableStateOf("") }
+    var pin by rememberSaveable { mutableStateOf("") }
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -47,7 +47,9 @@ fun Confirmation(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(painter = painterResource(id = R.drawable.bgorange), contentDescription = "bgtop",
-            modifier = Modifier.width(400.dp).height(250.dp), alignment = Alignment.TopEnd
+            modifier = Modifier
+                .width(400.dp)
+                .height(250.dp), alignment = Alignment.TopEnd
         )
     }
     Column(
@@ -71,7 +73,7 @@ fun Confirmation(navController: NavController) {
         Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(value = pin, modifier = Modifier.fillMaxWidth(), onValueChange = { pin = it }, label = {
             Text(text = "PIN Transaksi")
-        })
+        }, visualTransformation = PasswordVisualTransformation())
 
         Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = { confirmationHandler(navController, pin) },
@@ -96,7 +98,9 @@ fun Confirmation(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(painter = painterResource(id = R.drawable.bgbottom), contentDescription = "bgbottom",
-            modifier = Modifier.width(400.dp).height(250.dp), alignment = Alignment.BottomEnd
+            modifier = Modifier
+                .width(400.dp)
+                .height(250.dp), alignment = Alignment.BottomEnd
         )
     }
 }
